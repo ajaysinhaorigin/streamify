@@ -9,7 +9,7 @@ const MainContainer = () => {
         try {
             const data = await fetch(YOUTUBE_VIDEOS_API)
             const json = await data.json()
-            console.log(json.items)
+            // console.log(json.items)
             setVideos(json.items)
         } catch (error) {
             console.log('something went wrong')

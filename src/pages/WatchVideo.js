@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 import { closeMenu } from '../features/appSlice'
+import CommentsContainer from '../components/CommentsContainer'
 
 const WatchVideo = () => {
   const dispatch = useDispatch()
@@ -14,7 +15,7 @@ const WatchVideo = () => {
   }, [])
 
   return (
-    <div>
+    <div className="">
       <iframe
         width="800"
         height="400"
@@ -23,6 +24,7 @@ const WatchVideo = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
+      <CommentsContainer />
     </div>
   )
 }
