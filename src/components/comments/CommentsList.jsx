@@ -1,5 +1,5 @@
 import React from 'react'
-import { commentsData } from '../common/config'
+import { commentsData } from '../../common/config'
 import CommentsCard from './CommentsCard'
 const CommentsList = () => {
     return (

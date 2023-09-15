@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addLiveMessage } from '../features/liveChatSlice'
-import LiveChatCard from '../components/LiveChatCard'
-import { generateName, generateText } from '../common/helperFunctions'
+import { addLiveMessage } from '../../features/liveChatSlice'
+import LiveChatCard from './LiveChatCard'
+import { generateName, generateText } from '../../common/helperFunctions'
 
 const LiveChatContainer = () => {
     const [liveMessage, setLiveMessage] = useState('')

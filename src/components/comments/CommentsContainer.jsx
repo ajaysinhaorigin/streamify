@@ -1,5 +1,3 @@
-import React from 'react'
-
 import CommentsList from './CommentsList'
 
 const CommentsContainer = () => {

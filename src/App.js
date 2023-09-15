@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Body from './components/Body'
-import Header from './components/Header'
-import MainContainer from './components/MainContainer'
+import Body from './components/body/Body'
+import Header from './components/head/Header'
+import MainContainer from './components/body/MainContainer'
 import WatchVideo from './pages/WatchVideo'
 
 function App() {
