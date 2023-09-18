@@ -3,6 +3,7 @@ import appSlice from '../features/appSlice'
 import suggestionSlice from '../features/suggestionSlice'
 import liveChatSlice from '../features/liveChatSlice'
 import videoSlice from '../features/videoSlice'
+import buttonListSlice from '../features/buttonListSlice'
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     video: videoSlice,
     suggestions: suggestionSlice,
     liveChat: liveChatSlice,
+    buttonList: buttonListSlice,
   },
 })
 export default store

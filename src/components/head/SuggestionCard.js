@@ -1,30 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useFetchSearchSuggestions from '../../hooks/useFetchSearchSuggestions'
 
-const SuggestionCard = ({
-  search,
-  setSearchQuery,
-  setSearch,
-  setShowSuggestions,
-}) => {
-  const suggestions = useFetchSearchSuggestions(search)
-  const handleClick = (e) => {
-    setSearchQuery(e.target.innerText)
-    setSearch(e.target.innerText)
-    setShowSuggestions(false)
-  }
+const SuggestionCard = ({ suggestion, handleClick }) => {
   return (
-    <ul className="lg:w-1/3 w-3/5 absolute bg-white shadow-lg rounded-lg pb-2">
-      {suggestions?.map((suggestion, i) => (
-        <li
-          className="px-4 mt-2 py-1 cursor-pointer font-medium hover:bg-gray-50"
-          onClick={(e) => handleClick(e)}
-          key={i}
-        >
-          {suggestion}
-        </li>
-      ))}
-    </ul>
+    <li
+      className="px-4 mt-2 py-1 cursor-pointer font-medium hover:bg-gray-50"
+      onClick={() => handleClick(suggestion)}
+    >
+      {suggestion}
+    </li>
   )
 }
 

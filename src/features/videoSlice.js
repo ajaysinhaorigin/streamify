@@ -7,6 +7,7 @@ const videoSlice = createSlice({
     loading: true,
     error: {
       show: false,
+      code: '',
       msg: '',
     },
   },
@@ -22,7 +23,8 @@ const videoSlice = createSlice({
     },
     setError: (state, actions) => {
       state.error.show = true
-      state.error.msg = actions.payload
+      state.error.code = actions.payload.code
+      state.error.msg = actions.payload.msg
       state.loading = false
     },
   },

@@ -1,22 +1,25 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import { createBrowserRouter } from 'react-router-dom'
 import Body from './components/body/Body'
 import Header from './components/head/Header'
 import MainContainer from './components/body/MainContainer'
 import WatchVideo from './pages/WatchVideo'
+import SearchResults from './pages/SearchResults'
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Header />
-      <RouterProvider router={router}></RouterProvider>
+      <Body />
     </div>
   )
 }
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Body />,
+    element: <App />,
     children: [
       {
         path: '/',
@@ -25,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/watch',
         element: <WatchVideo />,
+      },
+      {
+        path: '/results',
+        element: <SearchResults />,
       },
     ],
   },

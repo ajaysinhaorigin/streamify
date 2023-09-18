@@ -1,14 +1,21 @@
-const YOUTUBE_API_KEY = 'AIzaSyAkPP1w3hI-l5tP7cA-Vvw1_945eT-twew'
+export const YOUTUBE_API_KEY = 'AIzaSyDqaz5usWmvI9wVOFD8nvyaOjWOYoobXfE'
 
 export const YOUTUBE_VIDEOS_API =
-  'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=' +
-  YOUTUBE_API_KEY
-
-export const YOUTUBE_SEARCH_RESULTS_API =
-  'https://www.googleapis.com/youtube/v3/search?part=snippet&q=iphone&maxResults=25&key=AIzaSyAq2RmyUE4VtIp_dZqJnOuF3VOzmH-IZPM'
+  'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='
 
 export const YOUTUBE_SEARCH_SUGGECTIONS_API =
   'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
+
+export const YOUTUBE_SEARCH_RESULTS_API =
+  'https://www.googleapis.com/youtube/v3/search?part=snippet&q=iphone&maxResults=25&key='
+
+// button list for different video categories
+export const BUTTON_LIST_API =
+  'https://youtube.googleapis.com/youtube/v3/videoCategories?regionCode=In&key='
+
+//responsed videos to different category button
+export const BUTTON_CATEGORY_VIDEOS_API =
+  'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=In&videoCategoryId='
 
 export const commentsData = [
   {
@@ -89,15 +96,6 @@ export const commentsData = [
     replies: [],
   },
 ]
-
-// button list for different video categories
-const categoryApi =
-  'https://youtube.googleapis.com/youtube/v3/videoCategories?regionCode=In&key=AIzaSyAq2RmyUE4VtIp_dZqJnOuF3VOzmH-IZPM'
-
-//responsed videos to different category button
-
-const filteredVideos =
-  'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=In&videoCategoryId=20&key=AIzaSyAq2RmyUE4VtIp_dZqJnOuF3VOzmH-IZPM'
 
 // playlist by channel name
 

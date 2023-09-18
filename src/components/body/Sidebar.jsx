@@ -6,35 +6,27 @@ const Sidebar = () => {
     if (!isMenuOn) return null
 
     return (
-        <div className='py-2 px-6 bg-gray-100' >
-            <ul>
-                <li>Home</li>
-                <li>Shorts</li>
-                <li>Subscriptions</li>
-                <li>watch later</li>
-            </ul>
-            <h1 className='pt-2 font-bold'>Subsciptions</h1>
-            <ul>
-                <li>sorts</li>
-                <li>videos</li>
-                <li>chat</li>
-                <li>watch later</li>
-            </ul>
-            <h1 className='pt-2 font-bold'>Subsciptions</h1>
-            <ul>
-                <li>sorts</li>
-                <li>videos</li>
-                <li>chat</li>
-                <li>watch later</li>
-            </ul>
-            <h1 className='pt-2 font-bold'>Subsciptions</h1>
-            <ul>
-                <li>sorts</li>
-                <li>videos</li>
-                <li>chat</li>
-                <li>watch later</li>
-            </ul>
-        </div>
+        <ul className='fixed overflow-y-scroll max-h-[90%] px-4 py-3 bg-gray-50 mt-16' >
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'  >Home</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Shorts</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>History</li>
+            <h1 className='pt-2 font-bold mb-2'>Explore</h1>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Trending</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Most liked</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Music</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Films</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Trending</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>liked</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Music</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Films</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Trending</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Most liked</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Music</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Films</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Most liked</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Music</li>
+            <li className='hover:bg-gray-100 hover:cursor-pointer hover:rounded-md px-3 pr-16 font-medium py-1'>Films</li>
+        </ul>
     )
 }
 

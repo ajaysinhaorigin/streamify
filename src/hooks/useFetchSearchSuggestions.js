@@ -5,6 +5,7 @@ import { cacheSuggestions } from '../features/suggestionSlice'
 
 const useFetchSearchSuggestions = (searchQuery) => {
   const [suggestions, setSuggestions] = useState([])
+
   const cacheData = useSelector((store) => store.suggestions)
   const dispatch = useDispatch()
 
@@ -25,7 +26,7 @@ const useFetchSearchSuggestions = (searchQuery) => {
     const data = await fetch(YOUTUBE_SEARCH_SUGGECTIONS_API + searchQuery)
     const json = await data.json()
     setSuggestions(json[1])
-    // console.log(suggestions)
+    console.log(suggestions)
 
     dispatch(
       cacheSuggestions({
