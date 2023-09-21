@@ -1,4 +1,14 @@
+import { useState, useEffect } from 'react'
+import useFetchVideos from "../../hooks/useFetchVideos"
+
 const ButtonCard = ({ id, snippet, setVideoCategoryId }) => {
+    const [results, setResults] = useState([])
+
+    useEffect(() => {
+
+    }, [id])
+
+    // if (results.length === 0) return null
 
     return (
         <button className="" onClick={() => setVideoCategoryId(id)}  >

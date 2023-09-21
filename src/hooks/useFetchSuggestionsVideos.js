@@ -10,6 +10,7 @@ const useFetchSuggestionsVideos = (suggestionQuery) => {
         `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${suggestionQuery}&maxResults=25&key=` +
           YOUTUBE_API_KEY
       )
+      // part=snippet&q=${suggestionQuery}&maxResults=25&key=d
       const json = await data.json()
       console.log(json?.items)
       if (json?.items) {
@@ -24,3 +25,4 @@ const useFetchSuggestionsVideos = (suggestionQuery) => {
 }
 
 export default useFetchSuggestionsVideos
+// part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=

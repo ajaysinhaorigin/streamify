@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-
-import { useDispatch } from 'react-redux'
 import useFetchSuggestionsVideos from '../hooks/useFetchSuggestionsVideos'
+import Shimmer from '../common/Shimmer'
+import SuggestionVideoCard from '../components/suggestionVideo/SuggestionVideoCard'
 
 const SearchResults = () => {
-    const dispatch = useDispatch()
-    const [searchParams, setSearchParams] = useSearchParams()
-    // console.log(search)
+    const [searchParams] = useSearchParams()
     const [query, setQuery] = useState('')
 
     useEffect(() => {
@@ -15,13 +13,16 @@ const SearchResults = () => {
         setQuery(query)
     }, [searchParams])
 
-    console.log(query)
     const suggestionVideos = useFetchSuggestionsVideos(query)
     console.log(suggestionVideos)
-    return (
-        <div>
-            <div><img src={suggestionVideos[0]?.snippet?.thumbnails?.medium.url} alt="img" /></div>
-            <p>{suggestionVideos[0]?.snippet?.title}</p>
+
+    if (!suggestionVideos) return null
+
+    return suggestionVideos.length === 0 ? <Shimmer /> : (
+        <div className='ml-60 pt-20'>
+            {
+                suggestionVideos.map((video) => <SuggestionVideoCard key={video?.id?.videoId} {...video} />)
+            }
         </div>
     )
 }

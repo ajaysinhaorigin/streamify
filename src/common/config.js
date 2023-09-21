@@ -1,7 +1,10 @@
-export const YOUTUBE_API_KEY = 'AIzaSyDqaz5usWmvI9wVOFD8nvyaOjWOYoobXfE'
+export const YOUTUBE_API_KEY = 'AIzaSyDBRcXANK_uy1aGSz1b2tAXbcuS9l8Mgk8'
 
 export const YOUTUBE_VIDEOS_API =
   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='
+
+export const YOUTUBE_SINGLE_VIDEO_API =
+  'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id='
 
 export const YOUTUBE_SEARCH_SUGGECTIONS_API =
   'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='

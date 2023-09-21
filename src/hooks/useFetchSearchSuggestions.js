@@ -23,16 +23,18 @@ const useFetchSearchSuggestions = (searchQuery) => {
   }, [searchQuery])
 
   const getSearchSuggestions = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_SUGGECTIONS_API + searchQuery)
-    const json = await data.json()
-    setSuggestions(json[1])
-    console.log(suggestions)
+    if (searchQuery !== '') {
+      const data = await fetch(YOUTUBE_SEARCH_SUGGECTIONS_API + searchQuery)
+      const json = await data.json()
+      setSuggestions(json[1])
+      console.log(suggestions)
 
-    dispatch(
-      cacheSuggestions({
-        [searchQuery]: json[1],
-      })
-    )
+      dispatch(
+        cacheSuggestions({
+          [searchQuery]: json[1],
+        })
+      )
+    }
   }
   return suggestions
 }
