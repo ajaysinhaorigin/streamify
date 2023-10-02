@@ -29,7 +29,7 @@ const useFetchVideos = (videoCategoryId) => {
       const json = await data.json()
       if (json?.items) {
         dispatch(setVideos(json?.items))
-        console.log(json?.items)
+        // console.log(json?.items)
       }
       if (json?.error) {
         dispatch(setError({ code: json.error?.code, msg: json.error?.message }))

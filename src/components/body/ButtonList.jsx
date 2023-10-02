@@ -4,35 +4,72 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import useFetchButtonList from "../../hooks/useFetchButtonList";
 import ButtonCard from "./ButtonCard";
+import { useState } from "react";
 
 
 const ButtonList = ({ setVideoCategoryId }) => {
+    const [selectedbutton, setSelectedButton] = useState('')
+
+    const handleButtonClick = (id) => {
+        setVideoCategoryId(id)
+        setSelectedButton(id)
+    }
     const buttonList = useFetchButtonList()
 
     const sliderSettings = {
         infinite: true,
         speed: 400,
-        slidesToShow: 7,
+        slidesToShow: 8,
         slidesToScroll: 1,
         dots: false,
         autoplay: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 7,
+                    slidesToScroll: 3,
+                    infinite: true,
+
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 2,
+                    infinite: true,
+
+
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+
+                }
+            }
+        ]
     }
 
     if (!buttonList) return null
 
     return buttonList.length === 0 ? null : (
-        <div className="fixed bg-white pl-5 pr-16 py-1 mx-3" >
+        <div className="fixed bg-white pl-10 pr-20 py-1" >
             <ul className='' >
                 <Slider {...sliderSettings} >
 
                     <button className=""   >
-                        <li className=' bg-gray-100 text-gray-800 font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2' >
+                        <li className={selectedbutton === '' ? 'bg-gray-800 text-gray-100 font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2' : ' font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2 bg-gray-100 text-gray-800'} onClick={() => handleButtonClick('')}>
 
                             All
                         </li>
                     </button>
                     {
-                        buttonList?.map((button) => <ButtonCard key={button.id} {...button} setVideoCategoryId={setVideoCategoryId} />)
+                        buttonList?.map((button) => <ButtonCard key={button.id} {...button} handleButtonClick={handleButtonClick} selectedbutton={selectedbutton} />)
                     }
 
                 </Slider>

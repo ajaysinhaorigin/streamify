@@ -8,34 +8,29 @@ import useViewCounts from "../../hooks/useViewCounts"
 
 const SuggestionVideoCard = ({ id }) => {
     const videoDetails = useFetchSingleVideo(id?.videoId)
-    const { snippet, statistics } = videoDetails
+    // const { snippet, statistics } = videoDetails
 
-    const views = useViewCounts(statistics?.viewCount)
-    const time = useVideoPublishTime(snippet?.publishedAt)
+    const views = useViewCounts(videoDetails?.statistics?.viewCount)
+    const time = useVideoPublishTime(videoDetails?.snippet?.publishedAt)
 
     // console.log(time)
-    if (Object.keys(videoDetails).length !== 0) {
-        console.log(videoDetails)
-    }
-
-    if (Object.keys(videoDetails).length === 0) return null
-
+    if (videoDetails === null || undefined) return null
     return (
         <div className="flex mb-5" >
-            <ImageComponent cdn={snippet?.thumbnails?.medium?.url} />
+            <ImageComponent cdn={videoDetails?.snippet?.thumbnails?.medium?.url} />
             <div className="ml-4 py-2" >
-                <h1 className="text-lg font-bold text-gray-900" >{snippet?.title.length > 75 ? snippet?.title.slice(0, 75) + '...' : snippet?.title}</h1>
+                <h1 className="text-lg font-bold text-gray-900" >{videoDetails?.snippet?.title.length > 75 ? videoDetails?.snippet?.title.slice(0, 75) + '...' : videoDetails?.snippet?.title}</h1>
                 <div>
                     <p className="text-gray-700 text-sm font-medium" >
                         {views} . {time}</p>
                 </div>
                 <div className="flex mt-3 items-center" >
                     <User />
-                    <p className="text-gray-700 text-sm font-medium ml-2"  >{snippet?.channelTitle
+                    <p className="text-gray-700 text-sm font-medium ml-2"  >{videoDetails?.snippet?.channelTitle
                     }</p>
                 </div>
                 <div className="text-gray-700 text-sm font-medium mt-3">
-                    <p>{snippet?.description.length > 85 ? snippet?.description.slice(0, 100) + "..." : snippet?.description}</p>
+                    <p>{videoDetails?.snippet?.description.length > 85 ? videoDetails?.snippet?.description.slice(0, 100) + "..." : videoDetails?.snippet?.description}</p>
                 </div>
             </div>
         </div>

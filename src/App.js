@@ -6,6 +6,9 @@ import Header from './components/head/Header'
 import MainContainer from './components/body/MainContainer'
 import WatchVideo from './pages/WatchVideo'
 import SearchResults from './pages/SearchResults'
+import Shorts from './pages/Shorts'
+import TrendingVideos from './pages/TrendingVideos'
+import Shopping from './pages/Shopping'
 
 function App() {
   return (
@@ -32,6 +35,19 @@ export const router = createBrowserRouter([
       {
         path: '/results',
         element: <SearchResults />,
+      },
+      {
+        path: '/shorts/:videoId',
+        element: <Shorts />,
+      },
+      // Explore
+      {
+        path: '/feed/trending',
+        element: <TrendingVideos />,
+      },
+      {
+        path: 'channel/UCkYQyvc_i9hXEo4xic9Hh2g',
+        element: <Shopping />,
       },
     ],
   },

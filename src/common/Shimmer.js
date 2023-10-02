@@ -1,7 +1,6 @@
 const Shimmer = () => {
   return (
     <>
-      {' '}
       {Array(15)
         .fill('')
         .map((e, i) => {

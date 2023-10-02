@@ -1,16 +1,10 @@
-export const YOUTUBE_API_KEY = 'AIzaSyDBRcXANK_uy1aGSz1b2tAXbcuS9l8Mgk8'
+export const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 export const YOUTUBE_VIDEOS_API =
   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='
 
 export const YOUTUBE_SINGLE_VIDEO_API =
   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id='
-
-export const YOUTUBE_SEARCH_SUGGECTIONS_API =
-  'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
-
-export const YOUTUBE_SEARCH_RESULTS_API =
-  'https://www.googleapis.com/youtube/v3/search?part=snippet&q=iphone&maxResults=25&key='
 
 // button list for different video categories
 export const BUTTON_LIST_API =
@@ -19,6 +13,29 @@ export const BUTTON_LIST_API =
 //responsed videos to different category button
 export const BUTTON_CATEGORY_VIDEOS_API =
   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=In&videoCategoryId='
+
+// youtube search apis
+export const YOUTUBE_SEARCH_SUGGECTIONS_API =
+  'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
+
+export const YOUTUBE_SEARCH_RESULTS_API =
+  'https://www.googleapis.com/youtube/v3/search?part=snippet&q=iphone&maxResults=25&key='
+
+// youtube short apis
+export const YOUTUBE_SHORTS_VIDEOS_API =
+  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&type=video&videoDuration=short&key=AIzaSyAkPP1w3hI-l5tP7cA-Vvw1_945eT-twew'
+
+// youtube trending videos api
+// for now
+export const YOUTUBE_TRENDING_VIDEOS_API =
+  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=trending&type=video&key='
+
+// 2. by category
+export const YOUTUBE_TRENDING_VIDEOS_BY_CATEGORY_API =
+  'https://youtube.googleapis.com/youtube/v3/search?maxResults=25&q=trending&type=video&videoCategoryId='
+
+export const YOUTUBE_SHOPPING_API =
+  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=shoping&type=video&key='
 
 export const commentsData = [
   {
@@ -101,7 +118,6 @@ export const commentsData = [
 ]
 
 // playlist by channel name
-
 const playlistbychannel =
   'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyAq2RmyUE4VtIp_dZqJnOuF3VOzmH-IZPM'
 

@@ -8,7 +8,7 @@ const VideoCard = ({ snippet, statistics }) => {
         <div className='my-4' >
             <ImageComponent cdn={thumbnails.medium.url} />
             <div className="mt-2 flex" >
-                <div className="mr-2 mt-1" >
+                <div className="min-w-fit mr-2 mt-1" >
                     <User />
                 </div>
                 <div className="mx-1">
