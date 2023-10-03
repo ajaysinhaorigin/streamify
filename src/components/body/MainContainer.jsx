@@ -11,6 +11,7 @@ const MainContainer = () => {
     const [videoCategoryId, setVideoCategoryId] = useState("")
     const { videos, loading, error } = useFetchVideos(videoCategoryId)
     const dispatch = useDispatch()
+    // console.log(videos)
     // if (loading) return <Shimmer />
     useEffect(() => {
         dispatch(openMenu())

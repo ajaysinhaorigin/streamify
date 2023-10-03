@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import useFetchExploreVideos from '../hooks/useFetchExploreVideos'
 // import ImageComponent from '../common/ImageComponent'
-import { YOUTUBE_TRENDING_VIDEOS_API, YOUTUBE_TRENDING_VIDEOS_BY_CATEGORY_API } from '../common/config'
+// import { YOUTUBE_EXPLORE_API, YOUTUBE_TRENDING_VIDEOS_BY_CATEGORY_API } from '../common/config'
 import { Link } from 'react-router-dom'
 import SuggestionVideoCard from '../components/suggestionVideo/SuggestionVideoCard'
 import ExploreHeader from '../common/ExploreHeader'
@@ -15,8 +15,8 @@ const TrendingVideos = () => {
     //     setSelectedButton(buttonName)
     // }
 
-    const videos = useFetchExploreVideos(YOUTUBE_TRENDING_VIDEOS_API, YOUTUBE_TRENDING_VIDEOS_BY_CATEGORY_API, query)
-    console.log(videos)
+    const videos = useFetchExploreVideos(query)
+    // console.log(videos)
     return (
         <>
             <ExplorePage>

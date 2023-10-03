@@ -4,7 +4,7 @@ const ImageComponent = ({ cdn }) => {
       <img
         src={cdn}
         alt="thambbnail"
-        className="w-full h-full rounded-lg hover:rounded-none "
+        className="w-full h-full rounded-xl hover:rounded-none "
         loading="lazy"
       />
     </div>
