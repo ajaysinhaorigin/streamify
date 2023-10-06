@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ExplorePage = ({ children }) => {
-  return <div className="lg:ml-56 pt-16 bg-white">{children}</div>
+  return <div className="bg-[#0f0f0f] lg:ml-60 pt-16">{children}</div>
 }
 
 export default ExplorePage

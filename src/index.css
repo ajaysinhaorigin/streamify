@@ -5,6 +5,7 @@
 body {
   box-sizing: border-box;
   /* overflow: hidden; */
+  background: #0f0f0f !important;
 }
 
 .slick-slider {
@@ -18,3 +19,34 @@ body {
 .slick-track > div {
   width: fit-content !important;
 }
+/* Styling for Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px !important;
+  max-height: 300px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f !important;
+  max-height: 300px !important;
+}
+::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+  border-radius: 8px; /* Set border radius */
+  max-height: 300px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Adjust the scrollbar thumb color */
+  border-radius: 8px; /* Set border radius to match container */
+  max-height: 300px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  max-height: 300px !important;
+}
+
+/* Styling for Firefox
+     { scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+     } */

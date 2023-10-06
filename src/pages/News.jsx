@@ -12,10 +12,12 @@ const News = () => {
     if (videos.length === 0) return null
     return (
         <ExplorePage>
-            <ExploreHeader
-                url="https://yt3.googleusercontent.com/qj80UVa3fFaLL9c0Cgd-BrEPuShbZnGBqrh2AArMRlfH2DZRAl4ilScrSqIRR3WIu01lSlJM=s88-c-k-c0x00ffffff-no-rj-mo"
-                heading="News"
-            />
+            <div className='bg-zinc-800 py-2 flex justify-between' >
+                <ExploreHeader
+                    url="https://yt3.googleusercontent.com/qj80UVa3fFaLL9c0Cgd-BrEPuShbZnGBqrh2AArMRlfH2DZRAl4ilScrSqIRR3WIu01lSlJM=s88-c-k-c0x00ffffff-no-rj-mo"
+                    heading="News"
+                />
+            </div>
             <div className="mx-8 pt-4 my-4">
                 {videos?.map((video, i) => (
                     <Link to={'/watch?v=' + video?.id?.videoId} key={i}>

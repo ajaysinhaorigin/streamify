@@ -9,7 +9,7 @@ const ExploreHeader = ({ url, heading }) => {
         className=" h-20 w-20 rounded-full "
         loading="lazy"
       />
-      <h1 className="text-2xl text-gray-900 font-medium pl-4">{heading}</h1>
+      <h1 className="text-2xl font-medium pl-4 text-white">{heading}</h1>
     </header>
   )
 }

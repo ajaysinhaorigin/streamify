@@ -58,12 +58,11 @@ const ButtonList = ({ setVideoCategoryId }) => {
     if (!buttonList) return null
 
     return buttonList.length === 0 ? null : (
-        <div className="fixed bg-white pl-10 pr-20 py-1" >
+        <div className="fixed bg-[#0f0f0f] mx-8 pl-5 pr-10 py-2" >
             <ul className='' >
                 <Slider {...sliderSettings} >
-
                     <button className=""   >
-                        <li className={selectedbutton === '' ? 'bg-gray-800 text-gray-100 font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2' : ' font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2 bg-gray-100 text-gray-800'} onClick={() => handleButtonClick('')}>
+                        <li className={selectedbutton === '' ? 'bg-gray-50 text-gray-900 hover:cursor-pointer rounded-md py-1 px-4 mr-2' : 'hover:cursor-pointer rounded-md py-1 px-4 mr-2  bg-zinc-800 text-gray-50'} onClick={() => handleButtonClick('')}>
 
                             All
                         </li>

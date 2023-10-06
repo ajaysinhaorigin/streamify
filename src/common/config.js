@@ -6,7 +6,11 @@ export const YOUTUBE_VIDEOS_API =
 export const YOUTUBE_SINGLE_VIDEO_API =
   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id='
 
+export const YOUTUBE_CHANNEL_DETAILS =
+  'https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id='
+
 // button list for different video categories
+
 export const BUTTON_LIST_API =
   'https://youtube.googleapis.com/youtube/v3/videoCategories?regionCode=In&key='
 

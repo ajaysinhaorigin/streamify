@@ -29,7 +29,7 @@ const ButtonCard = ({ id, snippet, handleButtonClick, selectedbutton }) => {
 
     return (
         <button className="" onClick={() => handleButtonClick(id)}  >
-            <li className={selectedbutton === id ? ' bg-gray-800 text-gray-100 font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2' : "font-medium hover:cursor-pointer rounded-md py-1 px-4 mr-2 bg-gray-100 text-gray-800"} >
+            <li className={selectedbutton === id ? 'bg-gray-50 text-gray-900 hover:cursor-pointer rounded-md py-1 px-4 mr-2' : ' hover:cursor-pointer rounded-md py-1 px-4 mr-2  bg-zinc-800 text-gray-50'} >
 
                 {snippet?.title}
             </li>
