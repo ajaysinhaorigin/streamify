@@ -19,7 +19,7 @@ const WatchVideo = () => {
   const [showMore, setShowMore] = useState(false)
 
   const video = useFetchSingleVideo(query)
-  console.log(video)
+  // console.log(video)
   const channelDetails = useFetchChannelDetails(video?.snippet?.channelId)
   const subscribers = useViewCounts(channelDetails?.statistics?.subscriberCount)
   // console.log(channelDetails)
