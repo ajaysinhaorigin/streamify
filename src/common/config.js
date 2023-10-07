@@ -120,6 +120,9 @@ export const commentsData = [
   },
 ]
 
+export const YOUTUBE_COMMENTS_API =
+  'https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=25&textFormat=plainText&videoId='
+
 // playlist by channel name
 const playlistbychannel =
   'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=25&key=AIzaSyAq2RmyUE4VtIp_dZqJnOuF3VOzmH-IZPM'

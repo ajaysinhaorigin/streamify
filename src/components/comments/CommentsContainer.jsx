@@ -1,16 +1,17 @@
 import { commentsData } from '../../common/config'
+import useFetchVideoComments from '../../hooks/useFetchVideoComments'
 import CommentsCard from './CommentsCard'
-const CommentsContainer = () => {
+
+const CommentsContainer = ({ videoId }) => {
+    console.log(videoId)
+    const comments = useFetchVideoComments(videoId)
     return (
         <>
-            <div className='p-2 m-2' >
-                <div className="font-bold text-xl" >Nested Comments</div>
-                <div>
-                    {
-                        commentsData?.map((comment, i) => <CommentsCard key={i} data={comment} />)
-                    }
+            <div>
+                {
+                    comments?.map((comment, i) => <CommentsCard key={comment?.id} {...comment} />)
+                }
 
-                </div>
             </div>
         </>
     )

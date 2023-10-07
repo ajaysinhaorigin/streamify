@@ -121,7 +121,7 @@ const WatchVideo = () => {
           <div className='my-5 text-lg font-medium'>
             {comments} Comments
           </div>
-          <CommentsContainer />
+          <CommentsContainer videoId={query} />
         </div>
         <div className="w-full">
           <LiveChatContainer />
