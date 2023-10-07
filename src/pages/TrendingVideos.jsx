@@ -11,7 +11,7 @@ const TrendingVideos = () => {
     return (
         <>
             <ExplorePage>
-                <ExploreHeader url='https:www.youtube.com/img/trending/avatar/trending.png' heading='Trending' />
+                <ExploreHeader url='https://www.youtube.com/img/trending/avatar/trending.png' heading='Trending' />
                 <nav className='px-4 mx-2 my-2 border-b border-b-zinc-700' >
                     <ul className='flex' >
                         <Link to='/feed/trending' >
