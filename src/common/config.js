@@ -20,7 +20,7 @@ export const BUTTON_CATEGORY_VIDEOS_API =
 
 // youtube search apis
 export const YOUTUBE_SEARCH_SUGGECTIONS_API =
-  'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
+  'https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
 
 export const YOUTUBE_SEARCH_RESULTS_API =
   'https://www.googleapis.com/youtube/v3/search?part=snippet&q=iphone&maxResults=25&key='
