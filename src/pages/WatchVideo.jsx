@@ -11,18 +11,17 @@ import { AiOutlineBell, AiOutlineLike, AiFillLike } from 'react-icons/ai'
 import { BiDislike, BiSolidDislike, BiDotsHorizontalRounded } from 'react-icons/bi'
 import { PiShareFatLight } from 'react-icons/pi'
 import useVideoPublishTime from '../hooks/useVideoPublishTime'
+import LikeButton from '../common/LikeButton'
 
 const WatchVideo = () => {
   const [search] = useSearchParams()
   const [query, setQuery] = useState(search.get('v'))
-  const [clickEvent, setClickEvent] = useState({ subscribe: false, like: false, dislike: false })
+  const [clickEvent, setClickEvent] = useState(false)
   const [showMore, setShowMore] = useState(false)
 
   const video = useFetchSingleVideo(query)
-  // console.log(video)
   const channelDetails = useFetchChannelDetails(video?.snippet?.channelId)
   const subscribers = useViewCounts(channelDetails?.statistics?.subscriberCount)
-  // console.log(channelDetails)
   const likeCount = useViewCounts(video?.statistics?.likeCount)
   const views = useViewCounts(video?.statistics?.viewCount)
   const comments = useViewCounts(video?.statistics?.commentCount)
@@ -69,29 +68,18 @@ const WatchVideo = () => {
                     <AiOutlineBell className='text-2xl' />
                     Subscribed
                   </div> : <div className='py-[0.38rem] px-4 rounded-full bg-gray-100 hover:bg-gray-300 ml-4 text-gray-900 font-medium'>Subscribe</div>}
-
                 </button>
               </div>
 
               <div className='flex items-center'>
-                <div className='flex bg-zinc-800  rounded-full'>
-                  <div className='flex hover:bg-zinc-700 gap-2 py-[0.38rem] px-4  rounded-l-full border-r pr-2 border-zinc-700'>
-                    <button onClick={() => setClickEvent({ ...clickEvent, like: !clickEvent.like })} >
-                      {
-                        clickEvent.like === true ?
-                          <AiFillLike className='text-2xl' />
-                          : <AiOutlineLike className='text-2xl' />
-                      }
-                    </button>
+                <div className='flex bg-zinc-800 rounded-full'>
+                  <div className='flex hover:bg-zinc-700 gap-2 py-[0.38rem] px-4  rounded-l-full border-r pr-2 border-zinc-700 items-center'>
+                    <LikeButton like={true} />
                     <p className='' >{likeCount}</p>
                   </div>
-                  <button className=' hover:bg-zinc-700 py-[0.38rem] px-4  rounded-r-full' onClick={() => setClickEvent({ ...clickEvent, dislike: !clickEvent.dislike })} >
-                    {
-                      clickEvent.dislike === true ?
-                        <BiSolidDislike className='text-2xl' />
-                        : <BiDislike className='text-2xl ' />
-                    }
-                  </button>
+                  <div className=' hover:bg-zinc-700 py-[0.38rem] px-4  rounded-r-full flex items-center'>
+                    <LikeButton like={false} />
+                  </div>
                 </div>
                 <div className='flex gap-2 bg-zinc-800 hover:bg-zinc-700 py-[0.38rem] px-4 rounded-full ml-4'>
                   <PiShareFatLight className='text-2xl ' />

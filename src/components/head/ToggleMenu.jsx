@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux'
 import { toggleMenu } from '../../features/appSlice'
-import { FiMenu } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 const ToggleMenu = () => {
     const dispatch = useDispatch()
@@ -11,7 +10,6 @@ const ToggleMenu = () => {
     return (
         <div className='flex items-center px-2' >
             <div className='h-7' >
-                {/* <FiMenu className='text-4xl text-white bg-zinc-700 rounded-full p-2 ' onClick={() => handletoggle()} /> */}
                 <img className='cursor-pointer h-full mr-1 rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYHp9G9qyC4v48TK0mk9mxaFgXxzLC-NIqxpbOpluKCeOtjdEJMgqGAw_Vz2LQg647O4&usqp=CAU" alt="img" loading='lazy' onClick={() => handletoggle()} />
             </div>
             <Link to='/' >

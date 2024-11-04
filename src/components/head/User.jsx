@@ -4,7 +4,7 @@ const User = ({ url }) => {
 
         <div className="mx-2 py-1" >
             {
-                url && <div className="w-8 h-8 mr-2 mt-1" >
+                url && <div className="w-10 h-10 mr-2 mt-1" >
                     <img className="rounded-full" src={url} alt="" />
 
                 </div>

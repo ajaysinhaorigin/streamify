@@ -8,8 +8,6 @@ const Header = () => {
     <Search />
     <User />
   </div>
-
-
 }
 
 export default Header
