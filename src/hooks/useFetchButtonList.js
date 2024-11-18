@@ -1,26 +1,25 @@
-import { useEffect } from 'react'
-import { BUTTON_LIST_API, YOUTUBE_API_KEY } from '../common/config'
-import { useSelector, useDispatch } from 'react-redux'
-import { addButtonList } from '../features/buttonListSlice'
+import { useEffect } from "react";
+import { BUTTON_LIST_API, YOUTUBE_API_KEY } from "../common/config";
+import { useSelector, useDispatch } from "react-redux";
+import { addButtonList } from "../features/buttonListSlice";
 
 const useFetchButtonList = () => {
-  const { buttonList } = useSelector((store) => store.buttonList)
-  const dispatch = useDispatch()
+  const { buttonList } = useSelector((store) => store.buttonList);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getButtonList()
-  }, [])
+    getButtonList();
+  }, []);
 
   const getButtonList = async () => {
-    const data = await fetch(BUTTON_LIST_API + YOUTUBE_API_KEY)
-    const json = await data.json()
-    // console.log(json?.items)
+    const data = await fetch(BUTTON_LIST_API + YOUTUBE_API_KEY);
+    const json = await data.json();
     if (json?.items) {
-      dispatch(addButtonList(json?.items))
+      dispatch(addButtonList(json?.items));
     }
-  }
+  };
 
-  return buttonList
-}
+  return buttonList;
+};
 
-export default useFetchButtonList
+export default useFetchButtonList;

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { AiFillLike, AiOutlineLike } from 'react-icons/ai'
-import { BiDislike, BiSolidDislike } from 'react-icons/bi'
+import React, { useState } from "react";
+import { AiFillLike, AiOutlineLike } from "react-icons/ai";
+import { BiDislike, BiSolidDislike } from "react-icons/bi";
 
 const LikeButton = ({ like }) => {
-  const [clickEvent, setclickEvent] = useState(false)
+  const [clickEvent, setclickEvent] = useState(false);
   return (
     <>
       {like === true ? (
@@ -24,7 +24,7 @@ const LikeButton = ({ like }) => {
         </button>
       )}
     </>
-  )
-}
+  );
+};
 
-export default LikeButton
+export default LikeButton;

@@ -1,21 +1,15 @@
-import { commentsData } from '../../common/config'
-import useFetchVideoComments from '../../hooks/useFetchVideoComments'
-import CommentsCard from './CommentsCard'
+import useFetchVideoComments from "../../hooks/useFetchVideoComments";
+import CommentsCard from "./CommentsCard";
 
 const CommentsContainer = ({ videoId }) => {
-    console.log(videoId)
-    const comments = useFetchVideoComments(videoId)
-    return (
-        <>
-            <div>
-                {
-                    comments?.map((comment, i) => <CommentsCard key={comment?.id} {...comment} />)
-                }
+  const comments = useFetchVideoComments(videoId);
+  return (
+    <>
+      {comments?.map((comment, i) => (
+        <CommentsCard key={comment?.id} {...comment} />
+      ))}
+    </>
+  );
+};
 
-            </div>
-        </>
-    )
-}
-
-export default CommentsContainer
-
+export default CommentsContainer;

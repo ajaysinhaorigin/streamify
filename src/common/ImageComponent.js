@@ -8,7 +8,7 @@ const ImageComponent = ({ cdn }) => {
         loading="lazy"
       />
     </div>
-  )
-}
+  );
+};
 
-export default ImageComponent
+export default ImageComponent;

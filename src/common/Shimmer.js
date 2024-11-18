@@ -2,7 +2,7 @@ const Shimmer = () => {
   return (
     <>
       {Array(15)
-        .fill('')
+        .fill("")
         .map((e, i) => {
           return (
             <div key={i}>
@@ -15,10 +15,10 @@ const Shimmer = () => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
     </>
-  )
-}
+  );
+};
 
-export default Shimmer
+export default Shimmer;

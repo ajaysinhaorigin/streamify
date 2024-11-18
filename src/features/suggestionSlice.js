@@ -1,15 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const suggestionSlice = createSlice({
-  name: 'suggestion',
+  name: "suggestion",
   initialState: {},
   reducers: {
     cacheSuggestions: (state, actions) => {
-      state = Object.assign(state, actions.payload)
+      state = Object.assign(state, actions.payload);
     },
   },
-})
+});
 
-export const { cacheSuggestions } = suggestionSlice.actions
+export const { cacheSuggestions } = suggestionSlice.actions;
 
-export default suggestionSlice.reducer
+export default suggestionSlice.reducer;

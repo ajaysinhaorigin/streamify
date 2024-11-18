@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const LiveChatMessage = () => {
-    return (
-        <div>LiveChatMessage</div>
-    )
-}
+  return <div>LiveChatMessage</div>;
+};
 
-export default LiveChatMessage
+export default LiveChatMessage;

@@ -1,4 +1,4 @@
-import { BsSearch } from 'react-icons/bs'
+import { BsSearch } from "react-icons/bs";
 
 const SuggestionCard = ({ suggestion, handleClick }) => {
   return (
@@ -9,7 +9,7 @@ const SuggestionCard = ({ suggestion, handleClick }) => {
       <BsSearch className="inline mr-3 text-white" />
       {suggestion}
     </li>
-  )
-}
+  );
+};
 
-export default SuggestionCard
+export default SuggestionCard;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { AiOutlineBell } from 'react-icons/ai'
+import React, { useState } from "react";
+import { AiOutlineBell } from "react-icons/ai";
 
 const SubscribeButton = () => {
-  const [clickEvent, setClickEvent] = useState(false)
+  const [clickEvent, setClickEvent] = useState(false);
   return (
     <button className="mx-5" onClick={() => setClickEvent(!clickEvent)}>
       {clickEvent === true ? (
@@ -16,7 +16,7 @@ const SubscribeButton = () => {
         </div>
       )}
     </button>
-  )
-}
+  );
+};
 
-export default SubscribeButton
+export default SubscribeButton;

@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const sidebarSlice = createSlice({
-  name: 'sidebar',
+  name: "sidebar",
   initialState: {
-    buttonName: 'Home',
+    buttonName: "Home",
   },
   reducers: {
     setButtonName: (state, actions) => {
-      state.buttonName = actions.payload
+      state.buttonName = actions.payload;
     },
   },
-})
+});
 
-export const { setButtonName } = sidebarSlice.actions
+export const { setButtonName } = sidebarSlice.actions;
 
-export default sidebarSlice.reducer
+export default sidebarSlice.reducer;

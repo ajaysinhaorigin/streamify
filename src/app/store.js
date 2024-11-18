@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import appSlice from '../features/appSlice'
-import suggestionSlice from '../features/suggestionSlice'
-import liveChatSlice from '../features/liveChatSlice'
-import videoSlice from '../features/videoSlice'
-import buttonListSlice from '../features/buttonListSlice'
-import sidebarSlice from '../features/sidebarSlice'
+import { configureStore } from "@reduxjs/toolkit";
+import appSlice from "../features/appSlice";
+import suggestionSlice from "../features/suggestionSlice";
+import liveChatSlice from "../features/liveChatSlice";
+import videoSlice from "../features/videoSlice";
+import buttonListSlice from "../features/buttonListSlice";
+import sidebarSlice from "../features/sidebarSlice";
 
 const store = configureStore({
   reducer: {
@@ -15,5 +15,5 @@ const store = configureStore({
     buttonList: buttonListSlice,
     sidebar: sidebarSlice,
   },
-})
-export default store
+});
+export default store;

@@ -1,19 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 const Shorts = () => {
-    const [short, setShort] = useState({})
+  const [short, setShort] = useState({});
 
-    useEffect(() => {
+  useEffect(() => {}, []);
 
-    }, [])
+  const getShort = async () => {};
 
-    const getShort = async () => {
+  return <div>Shorts</div>;
+};
 
-    }
-
-    return (
-        <div>Shorts</div>
-    )
-}
-
-export default Shorts
+export default Shorts;
